@@ -10,8 +10,8 @@ import java.io.InputStream;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
-public class ZipExtractorTest {
-    private ClassLoader cl = ZipExtractorTest.class.getClassLoader();
+public class ZipExtractorTests {
+    private ClassLoader cl = ZipExtractorTests.class.getClassLoader();
 
     @DisplayName("Чтение и проверка содержимого pdf файла")
     @Test
