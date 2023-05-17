@@ -15,11 +15,12 @@ public class JsonTest {
     private ClassLoader cl = JsonTest.class.getClassLoader();
     @DisplayName("Чтение и проверка содержимого json файла")
     @Test
-    void jsonParser() throws Exception {
+    void checkJson() throws Exception {
         try (InputStream is = cl.getResourceAsStream("books.json");
              InputStreamReader isr = new InputStreamReader(is)) {
             Library library = new ObjectMapper().readValue(isr, Library.class);
             List<Book> books = library.getBooks();
+
             Assertions.assertEquals(3, books.size());
 
             Book firstBook = books.get(0);
